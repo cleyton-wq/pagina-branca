@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* Custom font families */
+.font-serif {
+  font-family: 'Gilda Display', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hair Harmony Button Styles - Feminine Gradient */
+button, .btn, .next-btn, .submit-btn, .cta {
+  background: linear-gradient(90deg, #F6A6D6, #B9A7FF);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 26px;
+  box-shadow: 0 8px 20px rgba(185,167,255,0.35);
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover, .btn:hover, .next-btn:hover, .submit-btn:hover, .cta:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn-primary,
+button.btn-primary {
+  background: linear-gradient(90deg, #F6A6D6, #B9A7FF);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 26px;
+  box-shadow: 0 8px 20px rgba(185,167,255,0.35);
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary:hover,
+button.btn-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled,
+button.btn-primary:disabled,
+.btn:disabled,
+.next-btn:disabled,
+button:disabled {
+  filter: brightness(0.8);
+  transform: none;
+  cursor: not-allowed;
+}
+
+/* Exception for navigation buttons that should remain neutral */
+button.bg-white,
+button.bg-gray-200 {
+  background: white !important;
+  color: #374151 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+button.bg-gray-200 {
+  background: #e5e7eb !important;
+  color: #9ca3af !important;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom radio button styling */
+input[type="radio"]:checked {
+  background-color: #F6A6D6;
+  border-color: #F6A6D6;
+}
+
+input[type="radio"]:focus {
+  ring-color: #F6A6D6;
+  border-color: #F6A6D6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #F6A6D6, #B9A7FF);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #F6A6D6, #B9A7FF);
+  opacity: 0.8;
+}
+
+/* Hair Harmony Results Page Styles */
+:root {
+  --bg1: #F8ECF6;
+  --bg2: #ECE6FF;
+  --ink: #2A2A2A;
+  --body: #4A4A4A;
+  --ring: #E6E0FF;
+  --g1: #F6A6D6;
+  --g2: #B9A7FF;
+  --card: #FFFFFF;
+  --radius: 18px;
+  --shadow: 0 16px 48px rgba(42,42,42,.10);
+}
+
+.hh-results-wrap {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 480px at 12% 10%, #FFF7FC 0%, transparent 60%),
+    radial-gradient(900px 480px at 88% 18%, #F2EEFF 0%, transparent 60%),
+    linear-gradient(160deg, var(--bg1), var(--bg2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px, 6vw, 80px);
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: var(--body);
+}
+
+.hh-results-card {
+  width: min(880px, 94vw);
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 5vw, 52px);
+  text-align: center;
+}
+
+.hh-results-title {
+  font-family: 'Gilda Display', serif;
+  color: var(--ink);
+  font-size: clamp(28px, 4.2vw, 42px);
+  margin: 10px 0 6px;
+}
+
+.hh-results-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.65;
+  margin: 0 0 22px;
+}
+
+.hh-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(185,167,255,.18);
+  color: #5C47CC;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .35px;
+  text-transform: uppercase;
+}
+
+/* Asteriscos censurados em lilás */
+.hh-censored-purple {
+  color: #B9A7FF !important;
+  font-family: 'Courier New', monospace !important;
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  letter-spacing: 2px !important;
+  text-shadow: 0 0 8px rgba(185, 167, 255, 0.3) !important;
+}
+
+/* ==== BOTÃO: animação visual-only (shimmer + glow leve) ==== */
+a.hh-btn, button.hh-btn {
+  position: relative;
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 26px;
+  box-shadow: 0 10px 28px rgba(185,167,255,.35);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform .08s ease, filter .2s ease, box-shadow .2s ease;
+  outline: none;
+}
+
+/* Brilho suave no hover */
+a.hh-btn:hover, button.hh-btn:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(185,167,255,.45);
+}
+
+/* Focus ring acessível */
+a.hh-btn:focus-visible, button.hh-btn:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(185,167,255,.65);
+}
+
+/* Shimmer diagonal apenas visual (sem JS) */
+a.hh-btn::after, button.hh-btn::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 45%, rgba(255,255,255,.0) 55%);
+  transform: translateX(-120%) rotate(0.001deg);
+  pointer-events: none;
+  opacity: .0;
+}
+
+a.hh-btn:hover::after, button.hh-btn:hover::after {
+  animation: hhShimmer 900ms ease-out;
+  opacity: 1;
+}
+
+@keyframes hhShimmer {
+  0% { transform: translateX(-120%); opacity: .0; }
+  20% { opacity: .35; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+
+/* Pulsar sutil (idle) – respeita prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  a.hh-btn, button.hh-btn {
+    animation: hhIdlePulse 3.2s ease-in-out infinite;
+  }
+  @keyframes hhIdlePulse {
+    0%, 100% { box-shadow: 0 10px 28px rgba(185,167,255,.35); }
+    50% { box-shadow: 0 12px 32px rgba(185,167,255,.42); }
+  }
+}
